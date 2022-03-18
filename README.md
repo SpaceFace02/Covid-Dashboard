@@ -1,5 +1,7 @@
 ## OpsLyft Assignment
 
+### Deployed on https://opslyft-frontend.netlify.app/
+
 ### Some of the things I did:
 
 - Dashboard
