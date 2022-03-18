@@ -82,7 +82,7 @@ const ChartItem = () => {
               defaultValue={new Date("2022-02-01T13:13:30Z")}
               value={startDate}
               minDate={dayjs(new Date()).startOf("year").toDate()}
-              maxDate={dayjs(new Date()).subtract(1, "days").toDate()}
+              maxDate={dayjs(new Date()).subtract(15, "days").toDate()}
             />
           </div>
           <Bar
