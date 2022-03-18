@@ -11,6 +11,7 @@
 - Used oAuth2.0 authentication using Firebase
 - Reactive Table Search, RealTime Updates
 - Used React.js for the frontend and Node, MongoDB for the backend.
+- ChartJS for the graph.
 
 ### Some things to keep in mind
 
