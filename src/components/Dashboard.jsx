@@ -78,15 +78,6 @@ const Dashboard = ({ apiData }) => {
         Graph of Cases in India (15 days)
       </Title>
       <ChartItem />
-      {/* <div className="elfsight-app-532bfe2a-0144-44b8-b8af-1e809844647d"></div> */}
-      {/* <iframe
-        src="https://public.domo.com/cards/dJ45D"
-        width="100%"
-        height="600"
-        marginheight="0"
-        marginwidth="0"
-        frameborder="0"
-      ></iframe> */}
       <CasesTable />
     </div>
   );
