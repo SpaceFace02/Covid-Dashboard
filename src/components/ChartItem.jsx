@@ -53,16 +53,23 @@ const ChartItem = () => {
   };
 
   useEffect(() => {
-    const data = fetch(
-      `https://opslyft-backend.herokuapp.com/coviddata/chartdata/${startDate.toISOString()}`
-    );
-    data
-      .then((res) => res.json())
-      .then((res) => {
-        setData(res.data);
-        const newLabels = getDaysArray(dayjs(startDate).toDate(), dayjs(startDate).add(14, "day"));
-        setLabels(newLabels);
-      });
+    try {
+      const data = fetch(
+        `https://opslyft-backend.herokuapp.com/coviddata/chartdata/${startDate.toISOString()}`
+      );
+      data
+        .then((res) => res.json())
+        .then((res) => {
+          setData(res.data);
+          const newLabels = getDaysArray(
+            dayjs(startDate).toDate(),
+            dayjs(startDate).add(14, "day")
+          );
+          setLabels(newLabels);
+        });
+    } catch (err) {
+      setStartDate(new Date("2022-02-01T13:13:30Z"));
+    }
   }, [startDate]);
 
   return (
@@ -112,6 +119,7 @@ const ChartItem = () => {
                 },
               },
               responsive: true,
+              maintainAspectRatio: true,
               scales: {
                 x: {
                   stacked: true,
